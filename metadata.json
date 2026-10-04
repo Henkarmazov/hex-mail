@@ -1,0 +1,6 @@
+{
+  "name": "Hexmail - Email Sementara Modern",
+  "description": "Layanan email sementara modern, bersih, dan simpel dengan kotak masuk otomatis, generator kode OTP instan, dan antarmuka responsif.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

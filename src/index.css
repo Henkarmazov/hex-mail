@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF9F6;
+    color: #111827;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5E0D5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4CDBC;
+}
+
+/* Custom animations */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Styling for rich email content and plain text links */
+.email-content {
+  color: #111827;
+  line-height: 1.65;
+  font-size: 0.875rem;
+  word-break: break-word;
+}
+
+.email-content a {
+  color: #047857 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.email-content a:hover {
+  color: #065F46 !important;
+  text-decoration: underline !important;
+}
+
+.email-content p {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.email-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
